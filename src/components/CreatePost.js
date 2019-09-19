@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { firestore } from "../firebase";
 
 function CreatePost(props) {
+  console.log(props);
+
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   async function handleSubmit(e) {

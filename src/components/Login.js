@@ -9,7 +9,7 @@ const Login = () => {
     return (
       <div>
         <button className="btn-login" onClick={signInWithGoogle}>
-          Login
+          Google Login
         </button>
       </div>
     );

@@ -22,23 +22,30 @@ function CreatePost(props) {
   }
   const isDisabled = title === "" || content === "";
   return (
-    <div>
+    <div className="addPost">
       <h2>create a post</h2>
-      <form>
+      <form className="addPost-form">
         <input
           type="text"
           value={title}
           onChange={e => setTitle(e.target.value)}
+          placeholder="post title"
+          className="add-form-control"
         />
-        <input
+        <textarea
           type="text"
           value={content}
           onChange={e => setContent(e.target.value)}
-        />
+          placeholder="post content"
+          className="add-form-control"
+          rows="10"
+        ></textarea>
+
         <button
           type="submit"
           onClick={e => handleSubmit(e)}
           disabled={isDisabled}
+          className="add-form-control"
         >
           submit
         </button>
